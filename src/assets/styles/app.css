@@ -1,0 +1,142 @@
+:root {
+
+    --font-color: #d2438;
+    --footerbackground: #f192a5;
+    --headerbackground: #face16;
+
+}
+.container {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 100px 400px 250px 100px;
+    grid-gap: 1rem;
+    width: 1200px;
+     margin: 0 auto;
+        
+        
+  }
+
+  .header {
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+    background-color: var(--headerbackground);
+  }
+  
+/*** Navigace ***/
+  ul{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  nav ul li{
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 500;
+    border: 2px solid #d2438b;
+    background-color: #d2438b;
+    padding: 8px;
+    border-radius: 5px;
+  }
+
+  nav ul li a {
+   
+    text-decoration: none; 
+    color: #face16;
+  }
+
+  .tlacitko {
+    flex-grow: 5;
+    text-align: right;
+    background-color: #face16;
+    border: none;
+    padding: 0px;
+  }
+
+  button {
+    background-color: #d2438b;
+    border: 2px solid #d2438b;
+    color: #face16;
+    border: 2px solid #d2438b;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  /*** Hlavní stránka obsah ***/
+
+  .content1 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+    background: url(img/Pinkellow1.jpg);
+    Background-size: cover;
+    color: #d2438b;
+    font-size: 60px;
+    text-shadow: 6px 3px 6px rgb(244, 239, 224);
+  }
+ 
+  .content2 {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    background-color: #f192a5;
+  }
+
+  .content3 {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    background-color: #face16;
+    
+  }
+
+  .content4 {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+    background-color: #f192a5;
+  }
+
+  .obrazek {
+    display: block;
+    max-width: 100%;
+    /*width: 400px;
+    height: 250px;*/
+  }
+
+  .obrazek:hover{
+    opacity: 0.5;
+}
+
+  /*** Přihlášení ***/
+
+  .prihlaseni {
+    grid-row: 2/ 4;
+    grid-column: 1 / 4;
+    background-color: green;
+    background-image: url(img/Pinkellow1.jpg);
+    Background-size: cover;
+
+  }
+
+  .prihlaseniNadpis {
+    text-align: center;
+    margin-top: 80px;
+    color: #d2438b;
+    font-size: 50px;
+  }
+
+  form {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+
+  /*** Footer ***/
+
+  .footer {
+    grid-row: 4 / 5;
+    grid-column: 1 / 4;
+    background-color: var(--footerbackground);
+  }

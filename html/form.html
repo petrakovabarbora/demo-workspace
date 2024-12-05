@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input:required {
+            border-color: red;
+            border-width: 1,2 rem;
+        }
+        label{
+            font-weight: bold;
+        }
+        label[for="shoesize"] {
+            color: red;
+        }
+        textarea {
+            width: 100%;
+            resize: none;
+        } 
+        button:hover, input[type="submit"]:hover{
+            color: aquamarine;
+        }
+        button[type="reset"] {
+            background-color: yellow;
+        }
+    </style>    
+</head>
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Osobní informace</legend>
+             <label for="name">Jméno</label>
+            <input type="text" id="name" name="name" required maxlength="10"> <br>
+
+             <label>Pohlaví</label> <br>
+             <label for="man">Muž</label>
+             <label for="woman">Žena</label>
+            <input type="radio" name="sex" id="man" value="muž" >  
+            <input type="radio" name="sex" id="woman" value="žena"> <br>
+
+             <label for="birth date">Datum narození</label>
+             <input type="datetime-local" id="birth_date" name="birth_date" required>
+
+            <input type="password" id="password" name="password" required minlength="8"> <br>
+            <label for="profileimage">Profilová fotka</label> <br>
+            <input type="file" name="profileimage" id="profileimage" accept="image/jpg,image/png">
+            <label for="shoesize">Velikost boty</label>  
+            <input type="number" name="shoesize" id="shoesize" min="26" max="54">
+        </fieldset> 
+
+        <fieldset>
+            <legend>Kontaktní adresa</legend>
+             <label for="country"> Stát</label>
+            <select name="country" id="country">
+            <optgroup label="Evropa">
+                <option value="Ca">Kanada</option>
+                <option value="BR">Brazílie</option>
+                <option value="Ca">Kanada</option>
+            </optgroup>
+            
+            <optgroup label="Svět">
+                <option value="Ca">Kanada</option>
+                <option value="BR">Brazílie</option>
+                <option value="Ca">Kanada</option>
+            </optgroup>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Záliby</legend>
+            <label><input type="checkbox" name="hobbies" value="fishing">Rybaření</label>
+            <label><input type="checkbox" name="hobbies" value="chess">Šachy</label>
+            <label><input type="checkbox" name="hobbies" value="Lego">Lego</label> <br>
+            <label for="bio">O mně</label> <br>
+            <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+        </fieldset>
+        <input type="submit" value="Odeslat" name="submit">
+        <button type="reset">reset</button>
+        <button type="submit">submit</button>
+        <button type="nic">nic</button>
+
+
+    </form>
+</body>
+</html>

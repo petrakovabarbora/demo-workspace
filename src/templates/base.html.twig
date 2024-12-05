@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        {% block stylesheets %}
+        {% endblock %}
+
+        {% block javascripts %}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block header %}
+        <div class="container">
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="#">Naše výrobky</a></li>
+                    <li><a href="#">O nás</a></li>
+                    <li class="tlacitko"><button>Přihlásit se</button></li>
+                </ul>
+                
+            </nav>
+        </div>
+        {% endblock %}
+        {% block body %}
+        <div class="content1"> 
+            <h1>Pinkellow</h1>
+        </div>
+        <div class="content2">
+            <a href="#"><img class="obrazek" src="img/sperky.jpg" alt="">
+            </a> 
+        </div>
+        <div class="content3">
+            <a href="#"><img class="obrazek" src="img/zalozka.jpg" alt=""></a>
+        </div>
+        <div class="content4">
+            <a href="#"><img class="obrazek" src="img/balicek.jpg" alt=""></a>
+        </div>
+
+
+        {% endblock %}
+        {% block footer %}
+        <div class="footer">
+            <p>footer</p>
+        </div>
+      </div>
+        
+        {% endblock %}
+    </body>
+</html>
